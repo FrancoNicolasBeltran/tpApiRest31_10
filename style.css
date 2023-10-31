@@ -1,0 +1,59 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: black;
+}
+#tarjetas{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+img{
+    width: 150px;
+    height:100px;
+}
+div{
+    background-color: rgb(218, 188, 20);
+    display: grid;
+    flex-direction: column;
+}
+div.datos{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-color: rgb(255, 255, 255);
+}
+p{
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 800;
+    background-color: rgb(254, 255, 254);
+}
+h6{
+    text-align: center;
+    color: rgb(3, 3, 3);
+}
+h1{
+    font-size: 12px;
+}
+h1.edad{
+    color: rgb(247, 247, 247);
+    background-color: blue;
+    height: 20px;
+}
+h1.aa{
+    position: relative;
+    top: -10%;
+    margin-left: 10%;
+    width:80%;
+    height: 20px;
+    background-color: rgb(85, 0, 0);
+    color: rgb(247, 247, 247);
+}
+.tipo{
+    font-size: 12px;
+    background-color: blue;
+    color: aliceblue;
+}
