@@ -15,19 +15,32 @@ const callAPI = () => {
   fetch(api)
     .then((res) => res.json())
     .then((res) => {
+      const fila=document.createElement("tr");
+      fila.className="fila1";
+      fila.innerHTML=`
+      <tr>
+              <td >ID</td>
+              <td >Nombre y apellido</td>
+              <td >Foto</td>
+              <td >Edad</td>
+              <td >Info</td>
+              <td >Area</td>
+      </tr>`;
+      creaTarjetas.appendChild(fila);
       for (let i = 0; i <res.length; i++) {
         console.log(i);
-        const divCrear = document.createElement("div");
-        divCrear.innerHTML= `
-        <h6 class="aa">ID: ${res[i].id}</h1>
-        <h1 class="aa">${res[i].name} ${res[i].lastname}</h1>
-        <div class="datos">
+        const filaCrear = document.createElement("tr");
+        filaCrear.className="filas";
+        filaCrear.innerHTML= `
+        <td class="td1">${res[i].id}</td>
+        <td class="td2">${res[i].name} ${res[i].lastname}</td>
+        <td class="td3">
           <img src=${res[i].img}>
-          <h1 class="edad">EDAD:${res[i].age}</h1>
-        </div>
-        <p>INFO:${res[i].info}</p>
-        <h1 class="tipo">${res[i].area}</h1> `;
-        creaTarjetas.appendChild(divCrear);
+        </td>
+        <td class="td4">${res[i].age}</td>
+        <td class="td5">${res[i].info}</td>
+        <td class="td6">${res[i].area}</td> `;
+        creaTarjetas.appendChild(filaCrear);
       }
     });
 };
@@ -103,7 +116,9 @@ btnBuscar.addEventListener("click",()=>{
       })
       .then(datos=>{return datos.json()})
       .then(datos=> console.log(datos))
-      .catch(err => {console.log(err)});
+      .catch(err => {
+        alert("Actualice la pagina..se GUARDO el usuario con exito.")
+        console.log(err)});
     } catch (error) {
       
     }
@@ -141,7 +156,9 @@ btnBuscar.addEventListener("click",()=>{
         body: JSON.stringify(data),
         headers: {'Content-Type':'application/json'} 
       })
-      .then(datos=>{return datos.json()})
+      .then(datos=>{
+        alert("Actualice la pagina..se MODIFICO el usuario con exito.");
+        return datos.json()})
       .catch(error=>{console.log(error)});
     } catch (error) {
       
@@ -158,9 +175,24 @@ btnBuscar.addEventListener("click",()=>{
         method:'DELETE'
       })
         .then(datos=> {return datos.json()})
-        .catch(error=>{console.log(error);});
+        .catch(error=>{
+          console.log(error);
+          alert("Actualice la pagina..se borro el usuario con exito.");});
       
     } catch (error) {
       
     }
+  })
+  //formularios
+  const form1=document.getElementById("form1");
+  const form2=document.getElementById("form2");
+  const form3=document.getElementById("form3");
+  form1.addEventListener("click",function(e){
+    e.preventDefault();
+  })
+  form2.addEventListener("click",function(e){
+    e.preventDefault();
+  })
+  form3.addEventListener("click",function(e){
+    e.preventDefault();
   })

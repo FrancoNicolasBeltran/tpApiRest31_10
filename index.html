@@ -8,34 +8,89 @@
 </head>
 <body>
     <main>
-        <button id="btnVer">LISTADO</button>
-        <h1>Ver</h1>
-        <section id="tarjetas">
-        </section>
         <div>
+        <form action="" id="form1">
+            <ul>
+                <li>
+                    <label for="name">Ingrese el ID del empleado:</label>
+                    <input type="text" id="buscarID" placeholder="Ingrese ID:"> 
+                </li>
+            </ul>
             <button id="buscar">BUSCAR</button> 
-            <input type="text" id="buscarID" placeholder="Ingrese ID:"> 
-        </div>
-        <section id="encontrado">
-        </section>
+        </form>
+    </div>
+    <div id="encontrado">
+    </div>
+        <button id="btnVer">LISTADO</button>
+        <table class="default" id="tarjetas">
+          </table>
         <div>
-            <button id="btnSubir">SUBIR</button> 
-            <input type="text" id="subirName" placeholder="Ingrese NOMBRE:"> 
-            <input type="text" id="subirLastName" placeholder="Ingrese APELLIDO:"> 
-            <input type="text" id="subirUrlImg" placeholder="Ingrese FOTO(URL):">
-            <input type="text" id="subirAge" placeholder="Ingrese EDAD:"> 
-            <input type="text" id="subirInfo" placeholder="Ingrese INFO:">  
-            <input type="text" id="subirArea" placeholder="Ingrese AREA:"> 
+            <h1 class="nuevo">Nuevo Empleado</h1>
+            <form action="" id="form2">
+                <ul>
+                    <li>
+                      <label for="name">Nombre:</label>
+                      <input type="text" id="subirName" placeholder="Ingrese NOMBRE:"> 
+                    </li>
+                    <li>
+                      <label for="lastname">Apellido:</label>
+                      <input type="text" id="subirLastName" placeholder="Ingrese APELLIDO:"> 
+                    </li>
+                    <li>
+                      <label for="img">Foto del Empleado(URL):</label>
+                      <input type="text" id="subirUrlImg" placeholder="Ingrese FOTO(URL):">
+                    </li>
+                    <li>
+                        <label for="age">Edad:</label>
+                        <input type="text" id="subirAge" placeholder="Ingrese EDAD:"> 
+                    </li>
+                    <li>
+                        <label for="info">Informacion:</label>
+                        <input type="text" id="subirInfo" placeholder="Ingrese INFO:">  
+                    </li>
+                    <li>
+                        <label for="subirArea">Area:</label>
+                        <input type="text" id="subirArea" placeholder="Ingrese AREA:">   
+                    </li>
+                  </ul>
+                 <button id="btnSubir">SUBIR</button> 
+            </form>
         </div>
         <div>
-            <button id="btnMod">MODIFICAR</button> 
-            <input type="text" id="modID" placeholder="Ingrese ID del EMPLEADO:"> 
-            <input type="text" id="modName" placeholder=" NOMBRE(Modificar):"> 
-            <input type="text" id="modLastName" placeholder="APELLIDO(Modificar):"> 
-            <input type="text" id="modUrlImg" placeholder="FOTO(URL)(Modificar):">
-            <input type="text" id="modAge" placeholder="EDAD(Modificar):"> 
-            <input type="text" id="modInfo" placeholder="INFO(Modificar):">  
-            <input type="text" id="modArea" placeholder="AREA(Modificar):">  
+            <h1 class="modificar">Modificar Empleado</h1>
+            <form action="" id="form3">
+                <ul>
+                    <li>
+                        <label for="modID">ID del empleado:</label>
+                        <input type="text" id="modID" placeholder="Ingrese ID del EMPLEADO:"> 
+                      </li>
+                    <li>
+                      <label for="modName">Nombre:</label>
+                      <input type="text" id="modName" placeholder=" NOMBRE(Modificar):"> 
+                    </li>
+                    <li>
+                      <label for="modLastName">Apellido:</label>
+                      <input type="text" id="modLastName" placeholder="APELLIDO(Modificar):">  
+                    </li>
+                    <li>
+                      <label for="modUrlImg">Foto del Empleado(URL):</label>
+                      <input type="text" id="modUrlImg" placeholder="FOTO(URL)(Modificar):">
+                    </li>
+                    <li>
+                        <label for="modAge">Edad:</label>
+                        <input type="text" id="modAge" placeholder="EDAD(Modificar):"> 
+                    </li>
+                    <li>
+                        <label for="modInfo">Informacion:</label>
+                        <input type="text" id="modInfo" placeholder="INFO(Modificar):"> 
+                    </li>
+                    <li>
+                        <label for="modArea">Area:</label>
+                        <input type="text" id="modArea" placeholder="AREA(Modificar):">  
+                    </li>
+                  </ul>
+                  <button id="btnMod">MODIFICAR</button>  
+            </form>
         </div>
         <div>
             <button id="btnDelete">BorrarEmpleado</button> 
